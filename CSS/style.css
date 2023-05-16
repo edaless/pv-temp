@@ -37,11 +37,12 @@ body {
 .finestra {
     /* height: var(--h-carosello); */
     width: var(--w-carosello);
-    position: relative;
     background-color: blue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .carosello {
@@ -51,18 +52,20 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 
     background-color: brown;
 }
 
-img {
+.imgCar {
     width: 100%;
     height: auto;
 }
 
+
 .didascalia {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    bottom: -100%;
     right: 0;
 
     width: 85%;
@@ -71,7 +74,7 @@ img {
 
     color: white;
 
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 
 .title {
@@ -93,7 +96,7 @@ img {
     position: absolute;
     width: var(--w-tasto);
     height: var(--w-tasto);
-    top: calc((var(--h-carosello) - var(--w-tasto)) / 2);
+    top: 0;
     /* (sono centrati senza flex) */
 }
 

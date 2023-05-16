@@ -32,6 +32,7 @@ const images = [
 
 
 const carosello = document.querySelector(".carosello");
+const didascalia = document.querySelector(".didascalia");
 let index = 0;
 riempiCarosello(index);
 
@@ -62,11 +63,12 @@ function riempiCarosello(index) {
     const elemento = images[index];
     carosello.innerHTML =
         `
-    <img src="${elemento["image"]}" alt="">
-    <div class="didascalia">
+    <img src="${elemento["image"]}" class="imgCar">
+    `;
+    didascalia.innerHTML =
+        `
         <div class="title">${elemento["title"]}</div>
         <div class="text">${elemento["text"]}</div>
-    </div>
     `;
 };
 
