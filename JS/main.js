@@ -36,26 +36,28 @@ const didascalia = document.querySelector(".didascalia");
 let index = 0;
 riempiCarosello(index);
 
-const avanti = document.querySelector(".avanti");
-avanti.addEventListener("click", function () {
+document.querySelector(".avanti_macro").addEventListener("click", F_avanti);
+document.querySelector(".avanti_micro").addEventListener("click", F_avanti);
+
+function F_avanti() {
     if (index == (images.length - 1)) {
         index = 0;
     } else {
         index++;
     };
     riempiCarosello(index);
-});
+};
 
-const indietro = document.querySelector(".indietro");
-indietro.addEventListener("click", function () {
+document.querySelector(".indietro_macro").addEventListener("click", F_indietro);
+document.querySelector(".indietro_micro").addEventListener("click", F_indietro);
+function F_indietro() {
     if (index == 0) {
         index = (images.length - 1);
     } else {
         index--;
     };
     riempiCarosello(index);
-});
-
+};
 
 
 
@@ -75,41 +77,3 @@ function riempiCarosello(index) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// ciclo for console esplicativo
-// for(let i = 0; i < arr.length; i++){
-//     console.log("arr[" + i + "]: " + arr[i]);
-
-// };
-
-// ciclo while console esplicativo
-// let i = 0;
-// while(i < arr.length){
-//     console.log("arr[" + i + "]: " + arr[i]);
-
-//     i++;
-// };
-
-// for(){};
-
-// A = document.getElementById("B").value;
-
-
-//``
-
-// console.log("");
-// for(let i = 0; i < 10; i++){
-
-// }
-
-// }

@@ -12,17 +12,24 @@ body {
     justify-content: center;
 }
 
-:root {
+.colonna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
     /* var(--w-carosello) */
-    --w-carosello: 100%;
+    --w-carosello: 1200px;
     /* var(--h-carosello) */
-    --h-carosello: 200px;
+    --h-carosello: calc((9/16)*var(--w-carosello));
 
 }
 
 .finestra {
     /* height: var(--h-carosello); */
     width: var(--w-carosello);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,19 +40,10 @@ body {
 
 
 
-    background-color: blue;
+    /* background-color: blue; */
 
 
 
-}
-
-.riga-didasc {
-    display: flex;
-    justify-content: end;
-    margin: 0;
-    width: 100%;
-
-    /* background-color: aqua; */
 }
 
 .riga-carosello {
@@ -53,90 +51,236 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* max-width: 100%; */
-
-    background-color: brown;
+    width: var(--w-carosello);
+    overflow: hidden;
+    margin: 10px 0 10px 0;
 }
 
 .carosello {
     height: var(--h-carosello);
-    /* width: var(--w-carosello); */
+    width: calc(var(--w-carosello) - (2 * var(--w-tasto)));
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
+    background-color: var(--col-tasto);
 
-    background-color: brown;
+
 }
 
 .imgCar {
-    height: 100%;
-    width: auto;
+    max-height: var(--h-carosello);
+    max-width: 100%;
 }
 
 
+
+.riga-didasc {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    position: relative;
+
+    /* background-color: aqua; */
+}
+
 .didascalia {
-    /* position: absolute; */
-    bottom: -100%;
-    right: 0;
 
-    width: 15%;
+    width: calc(100% - (2 * var(--w-tasto)));
     height: 100px;
-    padding: 20px;
-    overflow-y: scroll;
-    text-align: end;
 
-    color: white;
+    color: rgb(0, 0, 0);
+    display: flex;
 
-    background-color: aqua;
+
+    /* background-color: rgb(215, 215, 215); */
+}
+
+* {
+    /* var(--w-title) */
+    --w-title: 20%;
 }
 
 .title {
     font-weight: bold;
     font-size: 25px;
+    margin-bottom: 10px;
+    width: var(--w-title);
 }
 
 .text {
+    width: calc(100% - var(--w-title));
 
     font-size: 22px;
+    overflow-y: scroll;
 }
 
-:root {
+* {
     /* var(--w-tasto) */
     --w-tasto: 40px;
+    /* var(--col-tasto) */
+    --col-tasto: rgba(11, 202, 235, 0.153);
+
+
 }
 
 .tasto {
-    position: absolute;
+
+    /* position: absolute; */
     width: var(--w-tasto);
-    height: var(--w-tasto);
+    height: var(--h-carosello);
     z-index: 500;
-    background-color: rgba(240, 248, 255, 0.537);
+    background-color: var(--col-tasto);
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.avanti {
-    right: 0;
-    /* background-color: rgb(43, 226, 198); */
+.tasto:hover {
+    background-color: rgba(87, 199, 199, 0.5);
 }
 
-.indietro {
+.indietro_macro {
     left: 0;
+    border-radius: 15px 0px 0px 15px;
     /* background-color: blueviolet; */
 }
 
-.dove {}
+
+.avanti_macro {
+    right: 0;
+    border-radius: 0px 15px 15px 0px;
+    /* background-color: rgb(43, 226, 198); */
+}
 
 
-@media screen and (min-width: 1600px) {
+/* micro */
+.comandi {
+    display: none;
+    justify-content: center;
+    height: 40px;
+    width: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0 10px 0;
+}
 
-    :root {
-        /* var(--h-carosello) */
-        --h-carosello: 400px;
+.comandi>.tasto {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1240px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 1000px;
 
     }
+
+}
+
+@media screen and (max-width: 1050px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 900px;
+
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 800px;
+
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .indietro_macro {
+        display: none;
+    }
+
+    .carosello {
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+    }
+
+    .avanti_macro {
+        display: none;
+    }
+
+    .comandi {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 818px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 700px;
+
+    }
+
+}
+
+
+@media screen and (max-width: 730px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 600px;
+
+    }
+
+}
+
+@media screen and (max-width: 625px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 500px;
+
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 400px;
+
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 300px;
+
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    * {
+        /* var(--w-carosello) */
+        --w-carosello: 100vw;
+
+    }
+
 }
