@@ -43,11 +43,24 @@ body {
     display: flex;
     justify-content: end;
     margin: 0;
+    width: 100%;
+
+    /* background-color: aqua; */
+}
+
+.riga-carosello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* max-width: 100%; */
+
+    background-color: brown;
 }
 
 .carosello {
     height: var(--h-carosello);
-    width: var(--w-carosello);
+    /* width: var(--w-carosello); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,8 +71,8 @@ body {
 }
 
 .imgCar {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
 }
 
 
@@ -98,19 +111,32 @@ body {
     position: absolute;
     width: var(--w-tasto);
     height: var(--w-tasto);
-    top: 0;
     z-index: 500;
-    /* (sono centrati senza flex) */
+    background-color: rgba(240, 248, 255, 0.537);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .avanti {
     right: 0;
-    background-color: rgb(43, 226, 198);
+    /* background-color: rgb(43, 226, 198); */
 }
 
 .indietro {
     left: 0;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .dove {}
+
+
+@media screen and (min-width: 1600px) {
+
+    :root {
+        /* var(--h-carosello) */
+        --h-carosello: 400px;
+
+    }
+}
