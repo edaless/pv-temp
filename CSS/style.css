@@ -1,3 +1,16 @@
+.DEBUG-blue {
+    background-color: blue;
+}
+
+.DEBUG-green {
+    background-color: green;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +29,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+}
+
+.riga {
+    padding: 20px 50px;
     width: 100%;
 }
 
@@ -178,8 +196,8 @@ body {
 
 .campus {
     padding: 10px;
-    background-color: rgba(137, 43, 226, 0.349);
-    width: 1000px;
+    background-color: rgba(137, 43, 226, 0.162);
+    max-width: 1000px;
 }
 
 
@@ -191,11 +209,31 @@ footer {
     color: white;
 }
 
+.luogo {
+    background-color: rgba(0, 128, 0, 0.105);
+}
+
+.persone {
+    display: flex;
+}
+
+.persona {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: rgba(127, 255, 212, 0.201);
+
+}
+
+.cento {
+    width: 100%;
+}
+
 .contatto {
     display: flex;
     justify-content: space-between;
     width: 170px;
-    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 
