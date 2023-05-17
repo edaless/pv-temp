@@ -208,26 +208,41 @@ body {
 }
 
 #showInfo {
+    height: 50px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: brown;
-
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s linear 0s;
 
 }
 
 #showInfo:hover {
-    height: 50px;
-    width: 200px;
-    background-color: aqua;
+    border-radius: 25px;
+    background-color: rgb(2, 105, 105);
 }
 
 .infoCampus {
     display: none;
+    flex-direction: column;
 }
 
 .visibile {
     display: flex;
+}
+
+.orario {
+    /* max-width: 300px; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.ora {
+    width: 150px;
 }
 
 footer {

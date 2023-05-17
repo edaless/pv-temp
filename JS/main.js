@@ -83,8 +83,10 @@ function F_select() {
 
     if (toggle == true) {
         document.querySelector(".infoCampus").classList.add("visibile");
+        document.querySelector("#showInfo").innerHTML = "Meno informazioni";
     } else {
         document.querySelector(".infoCampus").classList.remove("visibile");
+        document.querySelector("#showInfo").innerHTML = "Più informazioni";
 
     }
 
