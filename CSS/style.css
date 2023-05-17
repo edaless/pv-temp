@@ -9,6 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 * {
@@ -184,8 +185,7 @@ body {
     width: 340px;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 1px;
-    /* margin: 10px 0 10px 0; */
+    margin-bottom: 10px;
 }
 
 .comandi>.tasto {
@@ -200,6 +200,35 @@ body {
     max-width: 1000px;
 }
 
+.cont-showinf {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#showInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+
+
+}
+
+#showInfo:hover {
+    height: 50px;
+    width: 200px;
+    background-color: aqua;
+}
+
+.infoCampus {
+    display: none;
+}
+
+.visibile {
+    display: flex;
+}
 
 footer {
     width: 100%;
@@ -275,7 +304,8 @@ footer {
 
     .carosello {
         background-color: rgba(0, 0, 0, 0);
-        width: 100%;
+        width: 100vw;
+        height: auto;
     }
 
     .avanti_macro {
@@ -289,66 +319,8 @@ footer {
     .didascalia {
         display: none;
     }
-}
 
-
-@media screen and (max-width: 818px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 700px;
-
+    .colonna {
+        width: 100%;
     }
-
-}
-
-
-@media screen and (max-width: 730px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 600px;
-
-    }
-
-}
-
-@media screen and (max-width: 625px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 500px;
-
-    }
-
-}
-
-@media screen and (max-width: 510px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 400px;
-
-    }
-
-}
-
-@media screen and (max-width: 410px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 300px;
-
-    }
-
-}
-
-@media screen and (max-width: 300px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 100vw;
-
-    }
-
 }

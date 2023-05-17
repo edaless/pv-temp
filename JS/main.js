@@ -27,7 +27,7 @@ const images = [
 
 
 const carosello = document.querySelector(".carosello");
-const didascalia = document.querySelector(".didascalia");
+// const didascalia = document.querySelector(".didascalia");
 let index = 0;
 riempiCarosello(index);
 
@@ -61,13 +61,33 @@ function riempiCarosello(index) {
         `
     <img src="${elemento["image"]}" class="imgCar">
     `;
-    didascalia.innerHTML =
-        `
-        <div class="title">${elemento["title"]}</div>
-        <div class="text">${elemento["text"]}</div>
-    `;
+
+    // didascalia.innerHTML =
+    //     `
+    //     <div class="title">${elemento["title"]}</div>
+    //     <div class="text">${elemento["text"]}</div>
+    // `;
 };
 
 
 
+document.querySelector("#showInfo").addEventListener("click", F_select);
 
+let toggle = false;
+function F_select() {
+    if (toggle == true) {
+        toggle = false;
+    } else {
+        toggle = true;
+    }
+
+    if (toggle == true) {
+        document.querySelector(".infoCampus").classList.add("visibile");
+    } else {
+        document.querySelector(".infoCampus").classList.remove("visibile");
+
+    }
+
+};
+
+// rigLat[index].classList.add("dark");
