@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0;
+    /* background-color: #68de72; */
 }
 
 * {
@@ -52,6 +53,33 @@ body {
     /* var(--h-carosello) */
     --h-carosello: calc((9/16)*var(--w-carosello));
 
+}
+
+.cont-MML {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.cont-MML>img {
+    width: 25%;
+}
+
+
+
+.titolo {
+    display: flex;
+    margin-top: 150px;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+.asdp {
+    margin-bottom: 150px;
 }
 
 .slogan {
@@ -210,9 +238,9 @@ body {
 
 
 .campus {
-    padding: 10px;
-    background-color: rgba(137, 43, 226, 0.162);
-    /* max-width: 1000px; */
+    background-color: var(--col-due);
+    /* display: flex; */
+
 }
 
 .cont-showinf {
@@ -220,25 +248,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-#showInfo {
-    height: 50px;
-    width: 200px;
+#showInfo1,
+#showInfo2 {
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: var(--col-quattro);
     color: white;
-    padding: 5px;
-    border-radius: 5px;
-    transition: all 0.5s linear 0s;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 1s linear 0s;
+    margin: 100px;
 
 }
 
-#showInfo:hover {
-    border-radius: 25px;
-    background-color: rgb(2, 105, 105);
+#showInfo1:hover,
+#showInfo2:hover {
+    /* border-radius: 25px;
+    background-color: rgb(2, 105, 105); */
+    position: absolute;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .infoCampus {
@@ -246,8 +281,21 @@ body {
     flex-direction: column;
 }
 
+.vereinfo {
+    display: flex;
+}
+
 .visibile {
     display: flex;
+}
+
+* {
+    /* var(--w-sinistra) */
+    --w-sinistra: 60%;
+}
+
+.sinistra {
+    width: var(--w-sinistra);
 }
 
 .orario {
@@ -260,9 +308,22 @@ body {
     width: 150px;
 }
 
+.cont-vol {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: calc(100% - var(--w-sinistra));
+
+}
+
 .volantino {
-    margin-top: 50px;
-    width: 100%;
+    /* margin-top: 50px; */
+    /* width: 100%;
+    height: auto; */
+    display: block;
+    max-width: 100%;
+    /* max-height:95px; */
+    width: auto;
     height: auto;
 }
 
@@ -275,7 +336,11 @@ footer {
 }
 
 .luogo {
-    background-color: rgba(0, 128, 0, 0.105);
+    background-color: rgb(167, 240, 167);
+}
+
+.rg-pers {
+    background-color: var(--col-tre);
 }
 
 .persone {
@@ -287,11 +352,18 @@ footer {
 .persona {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    border-radius: 10px;
+    align-items: baseline;
+    padding: 30px;
+    border-radius: 30px;
     margin: 20px 0;
-    background-color: rgba(127, 255, 212, 0.201);
+    background-color: rgb(141, 222, 195);
 
+}
+
+.persona>.nome {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .cento {

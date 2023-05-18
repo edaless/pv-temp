@@ -71,7 +71,8 @@ function riempiCarosello(index) {
 
 
 
-document.querySelector("#showInfo").addEventListener("click", F_select);
+document.querySelector("#showInfo1").addEventListener("click", F_select);
+document.querySelector("#showInfo2").addEventListener("click", F_select);
 
 let toggle = false;
 function F_select() {
@@ -83,10 +84,12 @@ function F_select() {
 
     if (toggle == true) {
         document.querySelector(".infoCampus").classList.add("visibile");
-        document.querySelector("#showInfo").innerHTML = "Meno informazioni";
+        document.querySelector("#showInfo1").innerHTML = "Meno informazioni";
+        document.querySelector("#showInfo2").innerHTML = "Meno informazioni";
     } else {
         document.querySelector(".infoCampus").classList.remove("visibile");
-        document.querySelector("#showInfo").innerHTML = "Più informazioni";
+        document.querySelector("#showInfo1").innerHTML = "Più informazioni";
+        document.querySelector("#showInfo2").innerHTML = "Più informazioni";
 
     }
 
