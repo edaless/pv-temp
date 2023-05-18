@@ -261,7 +261,7 @@ body {
     color: white;
     padding: 20px;
     border-radius: 10px;
-    transition: all 1s linear 0s;
+    transition: all 0.7s linear 0s;
     margin: 100px;
 
 }
@@ -272,8 +272,8 @@ body {
     background-color: rgb(2, 105, 105); */
     position: absolute;
     padding: 10px 30px;
-    font-size: 20px;
-    font-weight: bold;
+    /* font-size: 20px; */
+    /* font-weight: bold; */
 }
 
 .infoCampus {
@@ -420,7 +420,7 @@ footer {
 
     .carosello {
         background-color: rgba(0, 0, 0, 0);
-        width: 100vw;
+        width: 100%;
         height: auto;
     }
 
@@ -439,6 +439,21 @@ footer {
     .colonna {
         width: 100%;
     }
+
+    .vereinfo {
+        flex-direction: column;
+    }
+
+
+    .sinistra {
+        width: 100%;
+    }
+
+    .cont-vol {
+        width: 100%;
+    }
+
+
 }
 
 @media screen and (max-width: 410px) {
