@@ -364,17 +364,20 @@ footer {
 .persone {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .persona {
     display: flex;
     flex-direction: column;
+    /* il flex-start serve per il border-bottom del nome */
+    align-items: flex-start;
     padding: 30px;
     border-radius: 30px;
     margin: 20px 0;
     background-color: rgb(141, 222, 195);
-    max-width: 33%;
+    /* max-width: 33%; */
 
 }
 
