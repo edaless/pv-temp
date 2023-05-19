@@ -154,7 +154,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    */
+
 }
 
 .imgCar {
@@ -279,17 +279,17 @@ body {
     color: white;
     padding: 15px;
     border-radius: 10px;
-    transition: all 0.7s linear 0s;
+    transition: all 0.2s linear 0s;
     margin: 100px;
 
 }
 
 #showInfo1:hover,
 #showInfo2:hover {
-    /* border-radius: 25px;
-    background-color: rgb(2, 105, 105); */
-    position: absolute;
-    padding: 30px;
+    border-radius: 30px;
+    /* background-color: rgb(2, 105, 105); */
+    /* position: absolute; */
+    /* padding: 30px; */
     /* font-size: 20px; */
     /* font-weight: bold; */
 }
@@ -313,6 +313,7 @@ body {
 }
 
 .sinistra {
+    padding: 20px 5px;
     width: var(--w-sinistra);
 }
 
@@ -326,23 +327,68 @@ body {
     width: 150px;
 }
 
+.cont-link-sch {
+
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.link-sch {
+    text-decoration: none;
+}
+
+.sch-iscr {
+    background-color: var(--col-uno);
+    padding: 20px;
+    color: white;
+    transition: all 0.1s linear 0s;
+    border-radius: 100px;
+
+}
+
+
+.sch-iscr:hover {
+    background-color: #1693ac;
+    padding: 20px;
+    color: white;
+
+
+
+
+}
+
+.sch-iscr>.icon {
+    margin-left: 10px;
+}
+
+
+
 .cont-vol {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     width: calc(100% - var(--w-sinistra));
 
+
 }
 
 .volantino {
-    /* margin-top: 50px; */
-    /* width: 100%;
-    height: auto; */
+
     display: block;
     max-width: 100%;
-    /* max-height:95px; */
+
+
     width: auto;
     height: auto;
+}
+
+.link-vol {
+
+    padding: 5px;
+}
+
+.link-vol:hover {
+    background-color: rgba(255, 255, 255, 0.231);
 }
 
 footer {
@@ -435,6 +481,7 @@ footer {
 
     .sinistra {
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .cont-vol {
