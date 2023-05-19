@@ -31,8 +31,7 @@ const carosello = document.querySelector(".carosello");
 let index = 0;
 riempiCarosello(index);
 
-document.querySelector(".avanti_macro").addEventListener("click", F_avanti);
-document.querySelector(".avanti_micro").addEventListener("click", F_avanti);
+document.querySelector(".avanti").addEventListener("click", F_avanti);
 
 function F_avanti() {
     if (index == (images.length - 1)) {
@@ -43,8 +42,7 @@ function F_avanti() {
     riempiCarosello(index);
 };
 
-document.querySelector(".indietro_macro").addEventListener("click", F_indietro);
-document.querySelector(".indietro_micro").addEventListener("click", F_indietro);
+document.querySelector(".indietro").addEventListener("click", F_indietro);
 function F_indietro() {
     if (index == 0) {
         index = (images.length - 1);

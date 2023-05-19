@@ -6,26 +6,25 @@
     background-color: green;
 }
 
-body {
-    /* display: flex;
-    flex-direction: column;
-    padding: 0; */
-    /* background-color: #68de72; */
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     /* var(--col-uno) */
-    --col-uno: #677BF5;
     /* var(--col-due) */
-    --col-due: #B168DE;
     /* var(--col-tre) */
-    --col-tre: #F56791;
     /* var(--col-quattro) */
-    --col-quattro: #EB8E63;
+
+    --col-uno: #025464;
+    --col-due: #E57C23;
+    --col-tre: #E8AA42;
+    --col-quattro: #F8F1F1;
+
+    /* --col-uno: #677BF5;
+    --col-due: #B168DE;
+    --col-tre: #F56791;
+    --col-quattro: #EB8E63; */
 }
 
 body {
@@ -35,6 +34,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: var(--col-quattro);
 }
 
 .colonna {
@@ -42,6 +42,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 1000px;
 }
 
 .riga {
@@ -55,6 +56,16 @@ body {
     /* var(--h-carosello) */
     --h-carosello: calc((9/16)*var(--w-carosello));
 
+}
+
+.top {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .cont-MML {
@@ -73,7 +84,7 @@ body {
 
 .titolo {
     display: flex;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .logo {
@@ -85,15 +96,27 @@ body {
 }
 
 .slogan {
-    margin: 70px 0;
-    padding: 20px;
+    margin: 50px 0 20px;
+    padding: 5px;
     color: #de235b;
-    border-bottom: 1px solid var(--col-uno);
+    border-radius: 20px;
+    border: 1px solid var(--col-uno);
+    box-shadow: 6px 2px #025464;
+    position: relative;
+
 }
 
-.finestra {
+.slogan:hover {
+    /* transition: 1s; */
+    /* left: 0; */
+    bottom: 30px;
+    right: 10px;
+    box-shadow: 16px 32px #025464;
+}
+
+.riga-carosello {
     /* height: var(--h-carosello); */
-    width: var(--w-carosello);
+    /* width: var(--w-carosello); */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -101,7 +124,7 @@ body {
     align-items: center;
     position: relative;
     padding: 0;
-
+    width: 100%;
 
 
 
@@ -111,32 +134,33 @@ body {
 
 }
 
-.riga-carosello {
+.finestra {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
-    width: var(--w-carosello);
-    overflow: hidden;
-    margin: 10px 0 10px 0;
+    width: 100%;
+    /* margin: 10px 0; */
+
+    background-color: var(--col-uno);
 }
 
 .carosello {
-    height: var(--h-carosello);
-    width: calc(var(--w-carosello) - (2 * var(--w-tasto)));
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     position: relative;
-    background-color: var(--col-tasto);
-
-
+    */
 }
 
 .imgCar {
     /* max-height: var(--h-carosello); */
     width: 100%;
+    height: auto;
 }
 
 
@@ -182,14 +206,6 @@ body {
     overflow-y: scroll;
 }
 
-* {
-    /* var(--w-tasto) */
-    --w-tasto: 40px;
-    /* var(--col-tasto) */
-    --col-tasto: rgba(11, 202, 235, 0.153);
-
-
-}
 
 .tasto {
 
@@ -197,7 +213,7 @@ body {
     width: var(--w-tasto);
     height: var(--h-carosello);
     z-index: 500;
-    background-color: var(--col-tasto);
+    background-color: rgba(255, 255, 255, 0.202);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,7 +221,7 @@ body {
 }
 
 .tasto:hover {
-    background-color: rgba(87, 199, 199, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .indietro_macro {
@@ -224,13 +240,13 @@ body {
 
 /* micro */
 .comandi {
-    display: none;
+    display: flex;
     justify-content: center;
     height: 40px;
     width: 340px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .comandi>.tasto {
@@ -259,9 +275,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--col-quattro);
+    background-color: var(--col-uno);
     color: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     transition: all 0.7s linear 0s;
     margin: 100px;
@@ -273,7 +289,7 @@ body {
     /* border-radius: 25px;
     background-color: rgb(2, 105, 105); */
     position: absolute;
-    padding: 10px 30px;
+    padding: 30px;
     /* font-size: 20px; */
     /* font-weight: bold; */
 }
@@ -354,11 +370,11 @@ footer {
 .persona {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
     padding: 30px;
     border-radius: 30px;
     margin: 20px 0;
     background-color: rgb(141, 222, 195);
+    max-width: 33%;
 
 }
 
@@ -368,8 +384,19 @@ footer {
     margin-bottom: 10px;
 }
 
+.persona>.posizione {
+    color: rgb(161, 161, 161);
+    font-size: 13px;
+    padding: 5px;
+    max-width: 80%;
+
+}
+
 .cento {
     width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .icona {
@@ -384,51 +411,7 @@ footer {
 }
 
 
-
-@media screen and (max-width: 1240px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 1000px;
-
-    }
-
-}
-
-@media screen and (max-width: 1050px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 900px;
-
-    }
-
-}
-
-@media screen and (max-width: 920px) {
-
-    * {
-        /* var(--w-carosello) */
-        --w-carosello: 800px;
-
-    }
-
-}
-
 @media screen and (max-width: 900px) {
-    .indietro_macro {
-        display: none;
-    }
-
-    .carosello {
-        background-color: rgba(0, 0, 0, 0);
-        width: 100%;
-        height: auto;
-    }
-
-    .avanti_macro {
-        display: none;
-    }
 
     .comandi {
         display: flex;
@@ -458,8 +441,20 @@ footer {
 
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 300px) {
     .riga {
         padding: 10px;
+    }
+
+    .carosello {
+        height: 200px;
+        width: auto;
+
+
+    }
+
+    .imgCar {
+        height: 200px;
+        width: auto;
     }
 }
