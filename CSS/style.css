@@ -57,12 +57,6 @@ body {
 .riga {
     padding: 20px 50px;
     width: 100%;
-    min-height: 110vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
 }
 
 * {
@@ -127,7 +121,7 @@ body {
     font-weight: bold;
 }
 
-.bg-white {
+.riga-slogan {
     background-color: white;
 }
 
@@ -142,7 +136,6 @@ body {
     text-align: center;
     position: relative;
     margin: 0;
-    margin-top: 20px;
 
 }
 
