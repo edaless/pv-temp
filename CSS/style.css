@@ -121,27 +121,26 @@ body {
     font-weight: bold;
 }
 
-.cont-slogan {
-    padding: 5px;
-    border-radius: 20px;
-    transition: all 0.2s linear 0s;
-
+.riga-slogan {
+    background-color: white;
 }
+
+
 
 .slogan {
     padding: 5px;
     border-radius: 20px;
     color: #de235b;
     background-color: white;
-    border: 1px solid var(--col-uno);
+    border: 5px solid #ffffff;
     text-align: center;
     position: relative;
     margin: 0;
 
 }
 
-.cont-slogan:hover {
-    background-color: #5fcbe1;
+.slogan:hover {
+    border: 5px solid #de235b;
 }
 
 .riga-carosello {
@@ -153,6 +152,7 @@ body {
     position: relative;
     padding: 0;
     width: 100%;
+    background-color: white;
 
 
 
@@ -282,12 +282,16 @@ body {
     --w-sinistra: 60%;
 }
 
-.sinistra {
+.card {
     padding: 20px;
     width: 100%;
     background-color: azure;
-    margin: var(--margin-volantino);
     border-radius: 10px;
+}
+
+.sinistra {
+    margin: var(--margin-volantino);
+
 }
 
 .programma {
