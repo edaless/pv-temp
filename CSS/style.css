@@ -65,7 +65,16 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 20px;
+    /* padding: 0 20px; */
+}
+
+.cont-qual {
+    width: 100%;
+    padding: 10px;
+}
+
+.qualita {
+    width: 10%;
 }
 
 .cont-MML {
@@ -78,13 +87,18 @@ body {
 
 .cont-MML>img {
     width: 25%;
+    margin-bottom: 30px;
+    margin-right: 30px;
 }
 
 
 
 .titolo {
     display: flex;
-    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 30px; */
+    width: 100%;
 }
 
 .logo {
@@ -92,31 +106,36 @@ body {
 }
 
 .asdp {
-    margin-bottom: 50px;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.cont-slogan {
+    padding: 5px;
+    border-radius: 20px;
+    transition: all 0.2s linear 0s;
+
 }
 
 .slogan {
-    margin: 50px 0 20px;
     padding: 5px;
-    color: #de235b;
     border-radius: 20px;
+    color: #de235b;
+    background-color: white;
     border: 1px solid var(--col-uno);
-    box-shadow: 6px 2px #025464;
+    text-align: center;
     position: relative;
+    margin: 0;
 
 }
 
-.slogan:hover {
-    /* transition: 1s; */
-    /* left: 0; */
-    bottom: 30px;
-    right: 10px;
-    box-shadow: 16px 32px #025464;
+.cont-slogan:hover {
+    background-color: #5fcbe1;
 }
 
 .riga-carosello {
-    /* height: var(--h-carosello); */
-    /* width: var(--w-carosello); */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -128,7 +147,6 @@ body {
 
 
 
-    /* background-color: blue; */
 
 
 
@@ -141,9 +159,6 @@ body {
     flex-direction: column;
     position: relative;
     width: 100%;
-    /* margin: 10px 0; */
-
-    background-color: var(--col-uno);
 }
 
 .carosello {
@@ -165,55 +180,13 @@ body {
 
 
 
-.riga-didasc {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    width: 100%;
-    position: relative;
-
-    /* background-color: aqua; */
-}
-
-.didascalia {
-
-    width: calc(100% - (2 * var(--w-tasto)));
-    height: 100px;
-
-    color: rgb(0, 0, 0);
-    display: flex;
-
-
-    /* background-color: rgb(215, 215, 215); */
-}
-
-* {
-    /* var(--w-title) */
-    --w-title: 70%;
-}
-
-.title {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 10px;
-    width: var(--w-title);
-}
-
-.text {
-    width: calc(100% - var(--w-title));
-
-    font-size: 22px;
-    overflow-y: scroll;
-}
-
-
 .tasto {
 
     /* position: absolute; */
-    width: var(--w-tasto);
+    width: 30px;
     height: var(--h-carosello);
     z-index: 500;
-    background-color: rgba(255, 255, 255, 0.202);
+    background-color: rgba(229, 249, 255, 0.82);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,37 +194,30 @@ body {
 }
 
 .tasto:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255);
 }
-
-.indietro_macro {
-    left: 0;
-    border-radius: 15px 0px 0px 15px;
-    /* background-color: blueviolet; */
-}
-
-
-.avanti_macro {
-    right: 0;
-    border-radius: 0px 15px 15px 0px;
-    /* background-color: rgb(43, 226, 198); */
-}
-
 
 /* micro */
 .comandi {
+    position: absolute;
     display: flex;
     justify-content: center;
     height: 40px;
     width: 340px;
-    border-radius: 20px;
+    padding: 0 10px;
     overflow: hidden;
-    /* margin-bottom: 10px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .comandi>.tasto {
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -287,11 +253,6 @@ body {
 #showInfo1:hover,
 #showInfo2:hover {
     border-radius: 30px;
-    /* background-color: rgb(2, 105, 105); */
-    /* position: absolute; */
-    /* padding: 30px; */
-    /* font-size: 20px; */
-    /* font-weight: bold; */
 }
 
 .infoCampus {
@@ -313,8 +274,18 @@ body {
 }
 
 .sinistra {
-    padding: 20px 5px;
-    width: var(--w-sinistra);
+    padding: 20px;
+    width: 100%;
+    background-color: azure;
+    margin: var(--margin-volantino);
+    border-radius: 10px;
+}
+
+.programma {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 .orario {
@@ -328,7 +299,9 @@ body {
 }
 
 .cont-link-sch {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 30px;
     padding-bottom: 80px;
 }
@@ -377,14 +350,23 @@ body {
     display: block;
     max-width: 100%;
 
+    border-radius: 10px;
+
 
     width: auto;
     height: auto;
 }
 
+
+
+* {
+    /* var(--margin-volantino) */
+    --margin-volantino: 5px;
+}
+
 .link-vol {
 
-    padding: 5px;
+    padding: var(--margin-volantino);
 }
 
 .link-vol:hover {
@@ -409,8 +391,10 @@ footer {
 
 .persone {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
     flex-wrap: wrap;
 }
 
@@ -462,20 +446,32 @@ footer {
 
 @media screen and (max-width: 900px) {
 
+
+    .qualita {
+        width: 15%;
+    }
+
     .comandi {
         display: flex;
     }
 
-    .didascalia {
-        display: none;
+    .riga {
+        padding: 5px;
     }
+
 
     .colonna {
         width: 100%;
     }
 
+
+    .cont-MML>img {
+        width: 200px;
+    }
+
     .vereinfo {
         flex-direction: column;
+        align-items: center;
     }
 
 
@@ -489,12 +485,55 @@ footer {
     }
 
 
+
+
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+
+
+    .qualita {
+        width: 30%;
+    }
+
+    .asdp {
+        margin: 0 10px;
+    }
+
+    .orario {
+        flex-direction: column-reverse;
+        font-weight: bold;
+
+    }
+
+    .ora {
+        font-weight: 500;
+    }
+
+
 }
 
 @media screen and (max-width: 300px) {
     .riga {
         padding: 10px;
     }
+
+    .cont-MML {
+        display: flex;
+        justify-content: center;
+    }
+
+    .asdp {
+        font-size: 13px;
+    }
+
+    .cont-MML>img {
+        margin-right: 0;
+    }
+
 
     .carosello {
         height: 200px;
@@ -507,4 +546,6 @@ footer {
         height: 200px;
         width: auto;
     }
+
+
 }
